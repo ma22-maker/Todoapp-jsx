@@ -206,7 +206,7 @@ function pendingtasksPage() {
                     )}
                   </div>
                   
-                  <div className="dropdown ">
+                  <div className="dropdown  dropdown-right ">
                     <label tabIndex={0} className="buttonStylesdropdown ">
                       <div className="tooltip" data-tip="Filter by Priority">
                         <BsFillFilterSquareFill size={30} color="black" />
@@ -214,7 +214,7 @@ function pendingtasksPage() {
                     </label>
                     <div
                       tabIndex={0}
-                      className="dropdown-content z-[1] card card-compact w-32 p-2 shadow bg-primary text-primary-content"
+                      className="dropdown-content  z-10 card card-compact w-32 p-2 shadow bg-primary text-primary-content"
                     >
                       <div className="card-body">
                         <div>
