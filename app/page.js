@@ -1,6 +1,6 @@
 "use client";
 import BaseLayout from "../components/BaseLayout";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux";
 
 export default function Home() {
   const actualtasks = useSelector((state) => state.InputData.data);
