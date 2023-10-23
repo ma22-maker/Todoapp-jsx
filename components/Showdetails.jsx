@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+//import { useSelector } from "react-redux/es/hooks/useSelector";
 import { AiFillEdit } from "react-icons/ai";
 import { AiFillDelete } from "react-icons/ai";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { deleteTask } from "../store/reduxstore";
 import {
   editTask,

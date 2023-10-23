@@ -1,7 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+//import { useSelector } from "react-redux/es/hooks/useSelector";
 import { closeModal, updateTask } from "../store/reduxstore";
-import { useDispatch } from "react-redux";
+import { useDispatch ,useSelector} from "react-redux";
 import { useState } from "react";
 
 function Modelclose() {

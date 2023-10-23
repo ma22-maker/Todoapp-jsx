@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import {  useSelector } from "react-redux/es/hooks/useSelector";
+//import {  useSelector } from "react-redux/es/hooks/useSelector";
 import BaseLayout from "../../components/BaseLayout";
 // import styles from "../components/Navbar/Showdetails.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import {markTaskAsunCompleted} from "../../store/reduxstore"
 
 function completedtasksPage() {

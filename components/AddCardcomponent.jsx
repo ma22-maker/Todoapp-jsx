@@ -3,7 +3,7 @@ import { inputData_SUCCESS } from "../store/reduxstore"
 import React from "react";
 import { RiAddFill } from "react-icons/ri";
 import { useState } from "react";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import Showdetails from "./Showdetails";

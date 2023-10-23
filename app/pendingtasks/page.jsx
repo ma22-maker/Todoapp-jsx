@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 // import styles from "../components/Navbar/Showdetails.module.css";
 import BaseLayout from "../../components/BaseLayout";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+//import { useSelector } from "react-redux/es/hooks/useSelector";
 import { markTaskAsCompleted } from "../../store/reduxstore";
 import { ImCross } from "react-icons/im";
 import { AiOutlineClear } from "react-icons/ai";
