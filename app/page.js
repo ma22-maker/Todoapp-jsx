@@ -28,20 +28,21 @@ export default function Home() {
 
   const progressValue = completedtasks.length;
   const intotalTasks = actualtasks.length;
+  const subtotal = (progressValue/intotalTasks)*100;
 
   return (
     <BaseLayout>
       <div className="container mx-auto p-4 flex flex-row">
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <h2 className="text-2xl font-bold mb-2">
             Total Tasks vs Completed Tasks(%100)
           </h2>
           <progress
             className="progress progress-accent w-72"
-            value={progressValue}
-            max={intotalTasks}
+            value={subtotal}
+            max={100}
           ></progress>
-        </div>
+        </div> */}
         <div className="flex flex-col items-center ml-12">
           <h2 className="text-2xl font-bold mb-4">
             Pending Tasks Based on Priority (%100)

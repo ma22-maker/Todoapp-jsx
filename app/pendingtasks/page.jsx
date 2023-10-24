@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 // import styles from "../components/Navbar/Showdetails.module.css";
 import BaseLayout from "../../components/BaseLayout";
 //import { useSelector } from "react-redux/es/hooks/useSelector";
+import {formatDate,prioritySorting} from "../../components/helpers";
 import { markTaskAsCompleted } from "../../store/reduxstore";
 import { ImCross } from "react-icons/im";
 import { AiOutlineClear } from "react-icons/ai";
@@ -39,42 +40,7 @@ function pendingtasksPage() {
     },
   ];
 
-  function formatDate(dateString) {
-    const date = new Date(dateString);
-    const day = date.getDate();
-    const month = date.toLocaleString("default", { month: "short" });
-    const year = date.getFullYear().toString().slice(-2);
-    return `${day}${month}${year}`;
-  }
-  function prioritySorting(priority, sortby) {
-    if (sortby === "highToLow") {
-      switch (priority) {
-        case "High":
-          return 3;
-        case "Medium":
-          return 2;
-        case "Low":
-          return 1;
-        case "None":
-          return 0;
-        default:
-          return 0;
-      }
-    } else if (sortby === "lowToHigh") {
-      switch (priority) {
-        case "High":
-          return 0;
-        case "Medium":
-          return 1;
-        case "Low":
-          return 2;
-        case "None":
-          return 3;
-        default:
-          return 0;
-      }
-    }
-  }
+
   const[markcomplete,setmarkcomplete] = useState(false);
   const handleTaskCompletion = (taskId) => {
     dispatch(markTaskAsCompleted(taskId));

@@ -5,19 +5,13 @@ import { useState } from "react";
 import BaseLayout from "../../components/BaseLayout";
 // import styles from "../components/Navbar/Showdetails.module.css";
 import { useDispatch,useSelector } from "react-redux";
+import {formatDate,prioritySorting} from "../../components/helpers";
 import {markTaskAsunCompleted} from "../../store/reduxstore"
 
 function completedtasksPage() {
   const dispatch = useDispatch();
   const tasks = useSelector((state) => state.InputData.completedTasks);
 
-  function formatDate(dateString) {
-    const date = new Date(dateString);
-    const day = date.getDate();
-    const month = date.toLocaleString("default", { month: "short" });
-    const year = date.getFullYear().toString().slice(-2);
-    return `${day}${month}${year}`;
-  }
 
   const [sorting, setSorting] = useState(false);
   const [sortby, setsortby] = useState("");
@@ -31,36 +25,7 @@ function completedtasksPage() {
    
   };
 
-  function prioritySorting(priority, sortby) {
-    if (sortby === "highToLow") {
-      switch (priority) {
-        case "High":
-          return 3;
-        case "Medium":
-          return 2;
-        case "Low":
-          return 1;
-        case "None":
-          return 0;
-        default:
-          return 0;
-      }
-    } else if (sortby === "lowToHigh") {
-      switch (priority) {
-        case "High":
-          return 0;
-        case "Medium":
-          return 1;
-        case "Low":
-          return 2;
-        case "None":
-          return 3;
-        default:
-          return 0;
-      }
-    }
-  }
-
+ 
   const sortTasks = (tasks, sortby) =>
     tasks.slice().sort((taskA, taskB) => {
       const priorityA = prioritySorting(taskA.priority, sortby);
